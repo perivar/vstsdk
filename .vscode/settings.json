@@ -97,6 +97,5 @@
     "cmake.mingwSearchDirs": [
         "C:\\msys64\\mingw64\\bin"
     ],
-    "cmake.preferredGenerators":[],
-    "cmake.sourceDirectory": "${workspaceFolder}/VST3_SDK"
+    "cmake.preferredGenerators":[]
 }

@@ -13,11 +13,20 @@
     }
   },
   {
-    "name": "Visual Studio 16 2019 x64 MinGW",
+    "name": "Visual Studio 16 2019 amd64 MinGW",
     "visualStudio": "32aadbd9",
     "visualStudioArchitecture": "amd64",
     "preferredGenerator": {
       "name": "MinGW Makefiles"
     }
-  }
+  },
+  {
+    "name": "Visual Studio 16 2019 amd64 VS16",
+    "visualStudio": "32aadbd9",
+    "visualStudioArchitecture": "amd64",
+    "preferredGenerator": {
+      "name": "Visual Studio 16 2019",
+      "platform": "x64"
+    }
+  } 
 ]
