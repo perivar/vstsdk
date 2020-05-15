@@ -1,0 +1,83 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+100                     PNG                  "graphics/background0.png"
+101                     PNG                  "graphics/english0.png"
+102                     PNG                  "graphics/knobs0.png"
+103                     PNG                  "graphics/lamp.png"
+104                     PNG                  "graphics/meter_animation0.png"
+105                     PNG                  "graphics/switch0.png"
+106                     PNG                  "graphics/knob7o.png"
+107                     PNG                  "graphics/knob4o.png"
+108                     PNG                  "graphics/en_ru0.png"
+109                     PNG                  "graphics/d_arrow.png"
+110                     PNG                  "graphics/d_input.png"
+111                     PNG                  "graphics/d_lim.png"
+112                     PNG                  "graphics/d_sat.png"
+113                     PNG                  "graphics/d_bypass.png"
+114                     PNG                  "graphics/d_render.png"
+115                     PNG                  "graphics/d_dither.png"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

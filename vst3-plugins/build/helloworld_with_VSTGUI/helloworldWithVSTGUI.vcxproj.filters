@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\perner\My Projects\vstsdk\vst3-plugins\helloworld_with_VSTGUI\source\plugfactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\perner\My Projects\vstsdk\vst3-plugins\helloworld_with_VSTGUI\source\plugcontroller.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\perner\My Projects\vstsdk\vst3-plugins\helloworld_with_VSTGUI\source\plugprocessor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\perner\My Projects\vstsdk\VST3_SDK\public.sdk\source\main\dllmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\perner\My Projects\vstsdk\vst3-plugins\helloworld_with_VSTGUI\include\plugcontroller.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\perner\My Projects\vstsdk\vst3-plugins\helloworld_with_VSTGUI\include\plugids.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\perner\My Projects\vstsdk\vst3-plugins\helloworld_with_VSTGUI\include\plugprocessor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\perner\My Projects\vstsdk\vst3-plugins\helloworld_with_VSTGUI\include\version.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\perner\My Projects\vstsdk\vst3-plugins\helloworld_with_VSTGUI\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\perner\My Projects\vstsdk\VST3_SDK" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{3FCA8C04-2C0E-3D4B-AE90-044ABAEB7A91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{BC77E85E-80CE-363F-875A-D1A4631576C5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

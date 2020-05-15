@@ -1,0 +1,109 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+//
+// Copyright (C) 2004 C. Lawrence Zitnick III <larryz@microsoft.com>
+// Copyright (C) 2010 Hermann Seib <him@hermannseib.com>
+// Copyright (C) 2015 Markus Kitsinger (SwooshyCueb) <root@swooshalicio.us>
+
+#include "resource.h"
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+//LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+//#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+BMP_BACKGROUND          BITMAP                  "res/background-new.bmp"
+BMP_GUITAR_TOP          BITMAP                  "res/guitar-top-new.bmp"
+BMP_GUITAR_MID          BITMAP                  "res/guitar-mid-new.bmp"
+BMP_GUITAR_BOTTOM       BITMAP                  "res/guitar-bottom-new.bmp"
+BMP_KNOB_STD            BITMAP                  "res/knob.bmp"
+BMP_KNOB_TUNE           BITMAP                  "res/knob-tune-new.bmp"
+BMP_KNOB_SLIDE          BITMAP                  "res/knob-slide.bmp"
+BMP_BTN_STD_RND         BITMAP                  "res/btn-round.bmp"
+BMP_BTN_STD_SQR         BITMAP                  "res/btn-square.bmp"
+BMP_BTN_STOP            BITMAP                  "res/btn-stop.bmp"
+BMP_BTN_ABS_REL         BITMAP                  "res/btn-abs-rel.bmp"
+BMP_ABOUT               BITMAP                  "res/about-new.bmp"
+BMP_PICK_POS            BITMAP                  "res/pick-pos.bmp"
+BMP_PICKUP_POS          BITMAP                  "res/pickup-pos.bmp"
+BMP_METER_VU_CIRCLE     BITMAP                  "res/meter-vu-circle.bmp"
+BMP_PALM_SLIDER         BITMAP                  "res/palm-slider.bmp"
+BMP_CHORD_DIRECTION     BITMAP                  "res/chord-direction.bmp"
+BMP_PICK_TYPE           BITMAP                  "res/pick-type.bmp"
+BMP_CHORD_NOTE_ON       BITMAP                  "res/chord-note-on.bmp"
+BMP_BODY_SELECTOR       BITMAP                  "res/body-selector.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+#define VS_VERSION_INFO 1
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,1,1,2
+ PRODUCTVERSION 2,1,1,2
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", " "
+            VALUE "FileDescription", "Revitar 2 - Swooshy's Fork Beta 2.1.1.2"
+            VALUE "FileVersion", "2, 1, 1, 2"
+            VALUE "InternalName", "Revitar 2.1.1.2"
+            VALUE "LegalCopyright", "Mozilla Public License v2.0. See included license file."
+            VALUE "OriginalFilename", "Revitar2.dll"
+            VALUE "ProductName", "Revitar 2"
+            VALUE "ProductVersion", "2, 1, 1, 2"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// FXB
+//
+
+IDR_PRESETBANK          FXB                     "res/preset.fxb"
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// VSTXML
+//
+
+RC_VSTXML             VSTXML                "res/librevitar.vstxml"
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// MANIFEST
+//
+
+#define MANIFEST_RESOURCE_ID 2
+#define RT_MANIFEST 24
+MANIFEST_RESOURCE_ID  RT_MANIFEST            "res/vst.manifest"
+/////////////////////////////////////////////////////////////////////////////

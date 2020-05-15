@@ -1,0 +1,163 @@
+{
+  "version": "2.0.0",
+  "echoCommand": true,
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "cl.exe build active file with debugging",
+      "command": ".\\.vscode\\build.bat '${workspaceFolder}' '${fileBasenameNoExtension}' '${fileBasename}'",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always"
+      },
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "type": "shell",
+      "label": "g++.exe build active file with debugging",
+      "command": "C:/msys64/mingw64/bin/g++.exe",
+      "args": [
+        "-I${workspaceFolder}",
+        "-I${workspaceFolder}/include",
+
+        "-g", // Generate debugging information`for gdp into the file
+        // "-Wpedantic", // Issue all the warnings demanded by strict ISO C and ISO C++
+        "-Wall", // Recommended compiler warnings (enable a set of warning, actually not all.)
+        "-Wextra", // This enables some extra warning flags that are not enabled by -Wall. (same as -W)
+        // "-Werror", // Make all warnings into errors.
+        // "-v", // verbose
+
+        "${file}",
+        "-o",
+        "${fileBasenameNoExtension}.exe",
+
+        // ---------------------------------------
+        // linking to libraries
+        // Note that the -lgcrypt option is not looking for gcrypt.o, but libgcrypt.so, or libgcrypt.a. Use LD_LIBRARY_PATH or -L<path> to set library search path.
+        // ---------------------------------------
+
+        // gcrypt support
+        "-lgcrypt", // gcrypt
+        "-lgpg-error", // gpg
+
+        // threading support
+        "-ltbb", // Threading Building Blocks
+
+        "-luuid",
+
+        // opengl and graphics libraries
+        // "-D FREEGLUT_STATIC", // ensure freeglut is compiled into the executable
+        // "-lfreeglut_static", // ensure freeglut is compiled into the executable
+        "-lfreeglut", // ensure freeglut is dynamically linked into the executable
+        "-lopengl32", // OpenGL Library
+        "-lglu32", // OpenGL Utility Library
+        "-lglew32", // OpenGL Extension Wrangler Library
+        "-lgdi32", // OpenGL pixel format functions & SwapBuffers
+        "-ldwmapi", // Desktop Window Manager (DWM)
+
+        // DirectX and other windows libraries
+        "-ld2d1", // Direct2D library like D2D1CreateFactory
+        "-ldwrite", // DirectX Typography Services like DWriteCreateFactory
+        "-lcomctl32", // The Common Controls Library - provider of the more interesting window controls
+        "-lshlwapi", // Shell Light-Weight Application Programming Interface
+        "-lwindowscodecs", // Image formats like GUID_ContainerFormatPng and CLSID_WICImagingFactory
+        "-lole32" // Component Object Model, as well as Object Linking and Embedding (CoCreateInstance and CoUninitialize)
+
+        // "-Wl',--subsystem',windows" // -Wl,-option passes the linker specific option -option to the linker. (note! escape the commas with ')
+      ],
+      "problemMatcher": {
+        "base": "$gcc",
+        "fileLocation": ["absolute"]
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "type": "shell",
+      "label": "gcc.exe build active file with debugging",
+      "command": "C:/msys64/mingw64/bin/gcc.exe",
+      "args": [
+        "-I${workspaceFolder}",
+        "-I${workspaceFolder}/include",
+        "-g", // Generate debugging information`for gdp into the file
+        // "-Wpedantic", // Issue all the warnings demanded by strict ISO C and ISO C++
+        "-Wall", // Recommended compiler warnings
+        "-Wextra", // This enables some extra warning flags that are not enabled by -Wall.
+        // "-Werror", // Make all warnings into errors.
+        // "-v", // verbose
+        "${file}",
+        "-o",
+        "${fileBasenameNoExtension}.exe",
+        "-lgcrypt", // gcrypt
+        "-lgpg-error", // gpg
+        "-ltbb" // Threading Building Blocks
+        // Note that the -lgcrypt option is not looking for gcrypt.o, but libgcrypt.so, or libgcrypt.a. Use LD_LIBRARY_PATH or -L<path> to set library search path.
+      ],
+      "problemMatcher": {
+        "base": "$gcc",
+        "fileLocation": ["absolute"]
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "type": "shell",
+      "label": "g++.exe build active file as dll with debugging",
+      "command": "C:/msys64/mingw64/bin/g++.exe",
+      "args": [
+        "-I${workspaceFolder}",
+        "-I${workspaceFolder}/include",
+        "-g", // Generate debugging information`for gdp into the file
+        "-Wall", // Recommended compiler warnings
+        "${file}",
+        "-o",
+        "${fileBasenameNoExtension}.dll",
+        "-shared",
+        "-s", // strip (compress)
+        // "-m64", // not needed -m64 is the default for a 64-bit configured gcc
+
+        // -Wl,-option passes the linker specific option -option to the linker. (note! escape the commas with ')
+        "-Wl',--subsystem',windows" // The “-Wl,--subsystem,windows” isn’t really necessary, but it’s just conventional that DLLs have the Windows GUI subsystem specified in their PE header.
+      ],
+      "problemMatcher": {
+        "base": "$gcc",
+        "fileLocation": ["absolute"]
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "type": "shell",
+      "label": "g++.exe build active file (-mwindows and -municode) with debugging",
+      "command": "C:/msys64/mingw64/bin/g++.exe",
+      "args": [
+        "-I${workspaceFolder}",
+        "-I${workspaceFolder}/include",
+        "-g", // Generate debugging information`for gdp into the file
+        "-Wall", // Recommended compiler warnings
+        "${file}",
+        "-o",
+        "${fileBasenameNoExtension}.exe",
+        "-mwindows", // create as windows app, i.e. the same as -Wl,--subsystem,windows ++
+        "-municode"
+      ],
+      "problemMatcher": {
+        "base": "$gcc",
+        "fileLocation": ["absolute"]
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
