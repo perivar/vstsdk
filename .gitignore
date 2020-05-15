@@ -3,3 +3,4 @@
 *.ilk
 *.obj
 *.pdb
+/vst3-plugins/build
