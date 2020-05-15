@@ -64,7 +64,7 @@ enable_language(RC)
 set(CMAKE_RC_COMPILE_OBJECT "<CMAKE_RC_COMPILER> <FLAGS> -O coff <DEFINES> -i <SOURCE> -o <OBJECT>")
 
 # Add VST 2.4 SDK
-set(VST_SDK_2_4_ROOT "${CMAKE_SOURCE_DIR}/include/VST2_SDK"  CACHE PATH "Path to VST 2.4 SDK")
+set(VST_SDK_2_4_ROOT "${CMAKE_SOURCE_DIR}/VST2_SDK"  CACHE PATH "Path to VST 2.4 SDK")
 set(VSTSDK2_4_PLUGIN_SOURCE
     ${VST_SDK_2_4_ROOT}/public.sdk/source/vst2.x/audioeffect.cpp
     ${VST_SDK_2_4_ROOT}/public.sdk/source/vst2.x/audioeffectx.cpp    
@@ -76,7 +76,7 @@ set(VSTSDK2_4_PLUGIN_SOURCE
 )
 
 # Add VSTGUI.SF SDK
-# set(VSTSDKGUI_DIR "${CMAKE_SOURCE_DIR}/include/VST2_SDK/vstgui.sf/vstgui" CACHE PATH "Path to VSTGUI.SF SDK")
+# set(VSTSDKGUI_DIR "${CMAKE_SOURCE_DIR}/VST2_SDK/vstgui.sf/vstgui" CACHE PATH "Path to VSTGUI.SF SDK")
 # set(VSTSDKGUI_PLUGIN_SOURCE
 #     ${VSTSDKGUI_DIR}/aeffguieditor.cpp
 #     ${VSTSDKGUI_DIR}/cfileselector.cpp
@@ -89,7 +89,7 @@ set(VSTSDK2_4_PLUGIN_SOURCE
 # set(VSTSDKGUI_INCLUDE_DIR ${VSTSDKGUI_DIR})
 
 # Add VSTGUI 3.6.0 rc2 SDK
-set(VSTSDKGUI_360_DIR "${CMAKE_SOURCE_DIR}/include/VST2_SDK/vstgui_360_rc2/vstgui" CACHE PATH "Path to VSTGUI_360_rc2 SDK")
+set(VSTSDKGUI_360_DIR "${CMAKE_SOURCE_DIR}/VST2_SDK/vstgui_360_rc2/vstgui" CACHE PATH "Path to VSTGUI_360_rc2 SDK")
 set(VSTSDKGUI_360_PLUGIN_SOURCE
     ${VSTSDKGUI_360_DIR}/aeffguieditor.cpp
     # ${VSTSDKGUI_360_DIR}/cdatabrowser.cpp
@@ -107,7 +107,7 @@ set(VSTSDKGUI_360_PLUGIN_SOURCE
 set(VSTSDKGUI_360_INCLUDE_DIR ${VSTSDKGUI_360_DIR})
 
 # set plugin root and plugin sources
-set(PLUGIN_ROOT "${CMAKE_SOURCE_DIR}/include/VST2_SDK/vstgui_360_rc2/vstgui/tutorial")
+set(PLUGIN_ROOT "${CMAKE_SOURCE_DIR}/VST2_SDK/vstgui_360_rc2/vstgui/tutorial")
 set(PLUGIN_SRCS
     # ${PLUGIN_ROOT}/source/TutorialEditor.cpp # without mouseover handle
     ${PLUGIN_ROOT}/source/Tutorial2Editor.cpp # with mouseover handle

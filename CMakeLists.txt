@@ -4,11 +4,13 @@ cmake_minimum_required (VERSION 3.4.3)
 # set verbose
 set(CMAKE_VERBOSE_MAKEFILE ON)
 
-# # call the CMakeLists.txt file in the freeverb directory
-# add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/vst2.x-plugins/molot01")
+#-------------------------------------------------------------------------------
+# Add VST 2 Plugins
+# Note! The Vst2 Plugins currently only support being compiled using the msys2 cmake kit
+#-------------------------------------------------------------------------------
 
 # # call the CMakeLists.txt file in the freeverb directory
-# add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/vst2.x-plugins/freeverb-vst2.4")
+# add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/vst2.x-plugins/molot01")
 
 # # call the CMakeLists.txt file in the minihost directory
 # add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/vst2.x-plugins/minihost")
@@ -36,6 +38,7 @@ set(CMAKE_VERBOSE_MAKEFILE ON)
 
 # return()
 
+
 #-------------------------------------------------------------------------------
 # Config
 #-------------------------------------------------------------------------------
@@ -51,12 +54,6 @@ set(SMTG_PLUGIN_TARGET_PATH "" CACHE PATH "Here you can redefine the VST3 plug-i
 #-------------------------------------------------------------------------------
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/VST3_SDK/cmake/modules")
-
-# call the ASPiK CMakeLists.txt's
-# add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/VST3_SDK/aspik.projects/DemoSynthPlugin")
-# add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/VST3_SDK/aspik.projects/DemoVolumePlugin")
-# add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/VST3_SDK/aspik.projects/PluginTemplate")
-# return()
 
 include(SMTG_VST3_SDK)
 

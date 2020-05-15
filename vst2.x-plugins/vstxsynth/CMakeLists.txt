@@ -64,7 +64,7 @@ enable_language(RC)
 set(CMAKE_RC_COMPILE_OBJECT "<CMAKE_RC_COMPILER> <FLAGS> -O coff <DEFINES> -i <SOURCE> -o <OBJECT>")
 
 # Add VST 2.4 SDK
-set(VST_SDK_2_4_ROOT "${CMAKE_SOURCE_DIR}/include/VST2_SDK"  CACHE PATH "Path to VST 2.4 SDK")
+set(VST_SDK_2_4_ROOT "${CMAKE_SOURCE_DIR}/VST2_SDK"  CACHE PATH "Path to VST 2.4 SDK")
 set(VSTSDK2_4_PLUGIN_SOURCE
     ${VST_SDK_2_4_ROOT}/public.sdk/source/vst2.x/audioeffect.cpp
     ${VST_SDK_2_4_ROOT}/public.sdk/source/vst2.x/audioeffectx.cpp    
@@ -76,7 +76,7 @@ set(VSTSDK2_4_PLUGIN_SOURCE
 )
 
 # Add VSTGUI.SF SDK
-set(VSTSDKGUI_DIR "${CMAKE_SOURCE_DIR}/include/VST2_SDK/vstgui.sf/vstgui" CACHE PATH "Path to VSTGUI.SF SDK")
+set(VSTSDKGUI_DIR "${CMAKE_SOURCE_DIR}/VST2_SDK/vstgui.sf/vstgui" CACHE PATH "Path to VSTGUI.SF SDK")
 set(VSTSDKGUI_PLUGIN_SOURCE
     ${VSTSDKGUI_DIR}/aeffguieditor.cpp
     ${VSTSDKGUI_DIR}/cfileselector.cpp
