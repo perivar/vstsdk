@@ -1,0 +1,18 @@
+[submodule "VST3_SDK/base"]
+	path = VST3_SDK/base
+	url = https://github.com/perivar/vst3_base
+[submodule "VST3_SDK/cmake"]
+	path = VST3_SDK/cmake
+	url = https://github.com/perivar/vst3_cmake
+[submodule "VST3_SDK/doc"]
+	path = VST3_SDK/doc
+	url = https://github.com/perivar/vst3_doc
+[submodule "VST3_SDK/pluginterfaces"]
+	path = VST3_SDK/pluginterfaces
+	url = https://github.com/perivar/vst3_pluginterfaces
+[submodule "VST3_SDK/public.sdk"]
+	path = VST3_SDK/public.sdk
+	url = https://github.com/perivar/vst3_public_sdk
+[submodule "VST3_SDK/vstgui4"]
+	path = VST3_SDK/vstgui4
+	url = https://github.com/perivar/vstgui
