@@ -16,3 +16,4 @@
 [submodule "VST3_SDK/vstgui4"]
 	path = VST3_SDK/vstgui4
 	url = git@github.com:perivar/vstgui.git
+	branch = develop
