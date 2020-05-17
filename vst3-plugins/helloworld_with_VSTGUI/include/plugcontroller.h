@@ -43,7 +43,7 @@ namespace Steinberg {
 namespace HelloWorld {
 
 //-----------------------------------------------------------------------------
-// PIN 04.04.2020 - added VSTGUI::
+// PIN: 04.04.2020 - added 'VSTGUI::' prefix to the VST3EditorDelegate
 class PlugController : public Vst::EditController, public VSTGUI::VST3EditorDelegate
 {
 public:

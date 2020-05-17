@@ -15,7 +15,7 @@ set(target helloworld)
 smtg_add_vst3plugin(${target} ${SDK_ROOT} ${plug_sources})
 set_target_properties(${target} PROPERTIES ${SDK_IDE_MYPLUGINS_FOLDER})
 
-# PIN 04.04.2020 - add libraries vstgui and the missing windows libraries
+# PIN: 04.04.2020 - add libraries vstgui and the missing windows libraries
 if(MINGW)
     set(VST_LIBS)
     list(APPEND VST_LIBS base sdk)

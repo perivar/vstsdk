@@ -17,7 +17,7 @@ if(SMTG_ADD_VSTGUI)
     set_target_properties(${target} PROPERTIES ${SDK_IDE_MYPLUGINS_FOLDER})
     target_include_directories(${target} PUBLIC ${VSTGUI_ROOT}/vstgui4)
 
-    # PIN 04.04.2020 - add libraries vstgui and the missing windows libraries
+    # PIN: 04.04.2020 - add libraries vstgui and the missing windows libraries
     if(MINGW)
         set(VST_LIBS)
         list(APPEND VST_LIBS base sdk vstgui_support vstgui windowscodecs)
